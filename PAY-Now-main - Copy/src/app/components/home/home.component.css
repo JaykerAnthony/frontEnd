@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px;
+}
+header img {
+  width: 80px;
+  cursor: pointer;
+  border: 4px solid #2f7b5f;
+  transition: 0.2s ease-in-out;
+  animation: logo 1.5s linear backwards;
+}
+header img:hover {
+  border: 6px solid #2f7b5f;
+}
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+.content {
+  position: relative;
+  left: 100px;
+}
+.content h1 {
+  font-size: 45px;
+  animation: fadein 1s linear backwards;
+}
+
+.content h3 {
+  animation: fadein 1s linear backwards;
+  animation-delay: 0.2s;
+}
+
+.container .image img {
+  width: 33vw;
+  animation: image 0.7s linear backwards;
+}
+.container h1 {
+  color: #2f7b5f;
+}
+
+.container .content p {
+  color: #444;
+  font-size: 15px;
+  animation: fadein 1s linear backwards;
+  animation-delay: 0.3s;
+}
+.container .content button {
+  outline: none;
+  border: 2px solid aliceblue;
+  padding: 7px 17px;
+  border-radius: 10px;
+  background-color: #2f7b5f;
+  color: #ffff;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.5s;
+  animation: fadein 1s linear backwards;
+  animation-delay: 0.6s;
+}
+.container .content button:hover {
+  border: 2px solid black;
+  letter-spacing: 0.5px;
+}
+
+.header .logo {
+  font-size: 30px;
+  color: #2f7b5f;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 20px;
+  animation: navlink 0.3s linear backwards;
+  animation-delay: calc(0.4s * var(--i));
+}
+header nav ul li a {
+  font-size: 20px;
+  color: #2f7b5f;
+  transition: letter-spacing 0.2s;
+}
+
+header nav ul li a:hover {
+  letter-spacing: 1px;
+}
+
+@keyframes fadein {
+  0% {
+    transform: translateY(-150px) scale(0) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes navlink {
+  0% {
+    transform: translateY(-150px) scale(0) rotate(10deg);
+  }
+  100% {
+    transform: translateY(15px) scale(1);
+  }
+}
+
+@keyframes logo {
+  0% {
+    transform: translateX(-200px);
+  }
+  50% {
+    transform: translatex(50px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
+
+@keyframes image {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
